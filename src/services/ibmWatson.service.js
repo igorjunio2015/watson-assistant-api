@@ -36,7 +36,7 @@ async function createSession() {
         .catch(err => {
             response = handleError(err);
         });
-        return response;
+    return response;
 }
 
 async function sendMessage(input, sessionId) {
@@ -56,12 +56,13 @@ async function sendMessage(input, sessionId) {
         }
     })
         .then(res => {
-            response.message = res.result;
+            response.message = res.result.output.generic;
+            response.exit = res.result.context.skills;
         })
         .catch(err => {
             response = handleError(err);
         });
-        return response;
+    return response;
 }
 
 async function deleteSession(sessionId) {
