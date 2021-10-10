@@ -57,7 +57,7 @@ async function sendMessage(input, sessionId) {
     })
         .then(res => {
             response.message = res.result.output.generic;
-            response.exit = res.result.context.skills;
+            response.exit = res.result.context.skills["main skill"];
         })
         .catch(err => {
             response = handleError(err);
