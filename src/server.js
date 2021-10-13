@@ -1,6 +1,6 @@
 const Express = require('express');
 const api = Express();
-const watsonRoute = require("./routes/ibmWatson.route");
+const watsonRoute = require("./routes/watson.route");
 
 /**
  * @ROUTE

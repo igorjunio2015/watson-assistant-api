@@ -1,5 +1,5 @@
 const { Router, json } = require("express");
-const watsonService = require("../services/ibmWatson.service");
+const watsonService = require("../services/watson.service");
 
 const routes = Router();
 
